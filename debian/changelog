@@ -1,0 +1,5 @@
+neofetch (1.9.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #844175)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 17 Nov 2016 00:03:38 +0900
