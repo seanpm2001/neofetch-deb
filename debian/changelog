@@ -1,3 +1,10 @@
+neofetch (1.9.1-2) unstable; urgency=medium
+
+  * Fix launches pacman game. (Closes: #845629)
+    Thanks to Dylan Araps <dylan.araps@gmail.com>.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sat, 26 Nov 2016 06:35:37 +0900
+
 neofetch (1.9.1-1) unstable; urgency=medium
 
   * Initial release. (Closes: #844175)
