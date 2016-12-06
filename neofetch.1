@@ -1,4 +1,4 @@
-.TH NEOFETCH "1" "November 2016" "1.9.1" "User Commands"
+.TH NEOFETCH "1" "December 2016" "2.0.1" "User Commands"
 .SH NAME
 neofetch \- simple system information script
 
@@ -18,6 +18,8 @@ Allows you to disable an info line from appearing in the output.
 NOTE: You can supply multiple args. eg.
 .br
 \'neofetch --disable cpu gpu disk shell\'
+.br
+NOTE: The arguments must all be lowercase.
 .TP
 .B \--os_arch 'on/off'
 Hide/Show OS architecture.
@@ -46,7 +48,9 @@ Hide/Show cpu speed.
 .B \--cpu_temp 'on/off'
 Hide/Show cpu temperature.
 .br
-NOTE This only works on linux.
+NOTE: This only works on Linux and BSD.
+.br
+NOTE: For FreeBSD-based systems, you need to enable coretemp kernel module.
 .TP
 .B \--distro_shorthand 'on/off'
 Shorten the output of distro (tiny, on, off)
@@ -132,39 +136,39 @@ Height of color blocks in lines
 .B \--block_range 'start' 'end'
 Range of colors to print as blocks
 
-.SH PROGRESS BARS
+.SH BARS
 .TP
-.B \--progress_char 'elapsed char' 'total char'
-Characters to use when drawing progress bars.
+.B \--bar_char 'elapsed char' 'total char'
+Characters to use when drawing bars.
 .TP
-.B \--progress_border on/off
+.B \--bar_border on/off
 Whether or not to surround the bar with '[]'
 .TP
-.B \--progress_length 'num'
-Length in spaces to make the progress bars.
+.B \--bar_length 'num'
+Length in spaces to make the bars.
 .TP
-.B \--progress_colors 'num' 'num'
-Colors to make the progress bar.
+.B \--bar_colors 'num' 'num'
+Colors to make the bar.
 .br
 Set in this order: elapsed, total
 .TP
 .B \--cpu_display       'mode'
-Progress bar mode.
+Bar mode.
 .br
 Takes: bar, infobar, barinfo, off
 .TP
 .B \--memory_display    'mode'
-Progress bar mode.
+Bar mode.
 .br
 Takes: bar, infobar, barinfo, off
 .TP
 .B \--battery_display   'mode'
-Progress bar mode.
+Bar mode.
 .br
 Takes: bar, infobar, barinfo, off
 .TP
 .B \--disk_display      'mode'
-Progress bar mode.
+Bar mode.
 .br
 Takes: bar, infobar, barinfo, off
 
@@ -210,7 +214,7 @@ NOTE: --gap can take a negative value which
 will move the text closer to the left side.
 .TP
 .B \--clean
-Remove all cropped images
+Delete cached files and thumbnails.
 
 .SH ASCII
 .TP
@@ -224,6 +228,14 @@ Colors to print the ASCII art
 .TP
 .B \--ascii_distro 'distro'
 Which Distro\'s ASCII art to print
+.br
+NOTE: Arch and Ubuntu have 'old' logo varients.
+.br
+NOTE: Use 'arch_old' or 'ubuntu_old' to use the old logos.
+.br
+NOTE: Ubuntu has flavor varients.
+.br
+NOTE: Change this to 'Lubuntu', 'Xubuntu', 'Ubuntu-GNOME' or 'Ubuntu-Budgie' to use the flavors.
 .TP
 .B \--ascii_logo_size 'size'
 Size of ascii logo.
