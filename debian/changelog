@@ -1,6 +1,8 @@
 neofetch (2.0.1-1) unstable; urgency=medium
 
   * New upstream release. (Closes: #846934)
+  * Remove debian/patches.
+    All patches were applied to upstream.
 
  -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 06 Dec 2016 20:31:36 +0900
 
