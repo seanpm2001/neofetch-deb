@@ -1,3 +1,9 @@
+neofetch (2.0.1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #846934)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 06 Dec 2016 20:31:36 +0900
+
 neofetch (1.9.1-2) unstable; urgency=medium
 
   * Fix launches pacman game. (Closes: #845629)
