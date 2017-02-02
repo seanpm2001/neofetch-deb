@@ -5,8 +5,8 @@ Build-Depends: debhelper (>= 10)
 Standards-Version: 3.9.8
 Section: utils
 Homepage: https://github.com/dylanaraps/neofetch
-#Vcs-Git: git://anonscm.debian.org/collab-maint/neofetch.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/neofetch.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/neofetch.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/neofetch.git
 
 Package: neofetch
 Architecture: all
