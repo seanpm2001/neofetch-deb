@@ -1,3 +1,9 @@
+neofetch (3.0.1-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 03 Feb 2017 07:09:18 +0900
+
 neofetch (3.0-1) experimental; urgency=medium
 
   * New upstream release.
