@@ -1,76 +1,122 @@
 ## Contributors
 
-- **[@MatthewCox](https://github.com/MatthewCox)**
-- **[@dawidd6](https://github.com/dawidd6)**
-- **[@erikdubois](https://github.com/erikdubois)**
 - **[@konimex](https://github.com/konimex)**
 - **[@mstraube](https://github.com/mstraube)**
-- **[@Artoriuz](https://github.com/Artoriuz)**
-- **[@WilsonRU](https://github.com/WilsonRU)**
-- **[@Takeya-Yuki](https://github.com/Takeya-Yuki)**
-- **[@iandrewt](https://github.com/iandrewt)**
-- **[@LER0ever](https://github.com/LER0ever)**
-
-
-## Operating System
-
-- Added support for IRIX.
-- Added support for Arch XFerience. **[@mstraube](https://github.com/mstraube)**
-- Added support for CloverOS.
-- Added support for Maui. **[@mstraube](https://github.com/mstraube)**
-- Added support for KS Linux. **[@Takeya-Yuki](https://github.com/Takeya-Yuki)**
+- **[@dominiklohmann](https://github.com/dominiklohmann)**
+- **[@ybden](https://github.com/ybden)**
+- **[@lexruee](https://github.com/lexruee)**
+- **[@AMDmi3](https://github.com/AMDmi3)**
+- **[@deadda7a](https://github.com/deadda7a)**
+- **[@winneon](https://github.com/winneon)**
+- **[@DamnWidget](https://github.com/DamnWidget)**
 
 
 ## General
 
-- Minimum required BASH version is now 3.2.
-    - (Neofetch has always used 3.2+ features, I've just made it obvious now in the documentation.)
-- Fixed config file not being created on first install.
+- Config file now has a `.conf` suffix.
+- Neofetch now assumes target directories (config file and ASCII directory) at install time, this fixes problems with systems such as NixOS.
+- `stdout` mode is now reimplemented.
+    - This mode prints the information in plain text.
+    - You can use it with `--stdout`.
+    - Example: https://gist.github.com/dylanaraps/151c205322cf3acae62661b76464a3f7
+- Fixed prompt location if color blocks are disabled.
+- Make makefile more portable. **[@AMDmi3](https://github.com/AMDmi3)**
+
+
+## Operating System
+
+- Added support for AryaLinux. **[@mstraube](https://github.com/mstraube)**
+- Added support for Amazon Linux AMI.
+- Added support for Artix Linux. **[@DamnWidget](https://github.com/DamnWidget)**
+- Added support for Endless OS.
+- Added support for Sabotage Linux.
+- Added support for Siduction. **[@lexruee](https://github.com/lexruee)**
+- Added support for Source Mage.
+- Added support for Parsix GNU/Linux. **[@mstraube](https://github.com/mstraube)**
+- Added support for Nurunner. **[@mstraube](https://github.com/mstraube)**
+- Fixed Raspbian being detected as ChromeOS.
 
 
 ## Images
 
-- [w3m] Added `--loop` flag which makes Neofetch draw the image once per second.
-    - This is a workaround to the images disappearing on resize and workspace switch.
-    - Use Ctrl+C to exit.
-- [w3m] Fixed w3m-img not found on FreeBSD 12. **[@Artoriuz](https://github.com/Artoriuz)**
+- [w3m] Fixed w3m-img not found on NixOS.
+- Added support for using all image types as input.
+    - Neofetch now supports `svg`, `tiff` etc.
 
 
-## Ascii
+## ASCII
 
-- Added Ubuntu-MATE ascii art.
-- Fixed ArchLabs ascii art.  **[@erikdubois](https://github.com/erikdubois)**
-- Updated GoboLinux ascii art. **[@WilsonRU](https://github.com/WilsonRU)**
-- Fixed `--ascii_distro windows10` not working.
+- Added small Debian.
+- Added small FreeBSD.
+- Added small macOS.
+- Added small NixOS.
 
 
 ## Info
 
-**Distro**
+**GPU Driver**
 
-- [Solaris, AIX, Haiku] The machine architecture will now be shown properly instead of machine ID.
+- [Linux] Added a new info function (*off by default*) to display the GPU Driver currently in use.
+- Add `info "GPU Driver" gpu_driver` to your config to use it.
 
-**Terminal Emulator**
+**CPU**
 
-- Added support for Neovim terminal emulator. **[@LER0ever](https://github.com/LER0ever)**
-- Added font support for mate-terminal. **[@mstraube](https://github.com/mstraube)**
-- [Termite] Fix font mismatch. **[@MatthewCox](https://github.com/MatthewCox)**
-- Use `$SSH_TTY` for terminal detection if machine is connected via SSH.
-- Break from loop if PPID can't be accessed/not found.
+- [Linux] Fixed inaccurate output on ARM SoC devices.
+- [Linux] Fixed CPU speed not appearing on PowerPC systems.
+- [NetBSD] Added support for CPU temperature. (NOTE: This only supports newer Intel processors)
+- Fixed inaccurate speed output in systems with CPU speed less than 1 GHz.
+- Deprecated `cpu_shorthand` in favor of `cpu_brand`.
 
 **GPU**
 
-- [Linux] Fixed GPU sort.
-
-**Song**
-
-- Do not detect ibus\* or indicator\* as player. **[@dawidd6](https://github.com/dawidd6)**
+- [Linux] Filter out duplicate entries.
 
 **Model**
 
-- Specify when running on a Hackintosh. **[@LER0ever](https://github.com/LER0ever)**
+- Added support for QEMU/KVM.
+- Renamed subtitle to `Host:`.
+
+**Uptime**
+
+- [AIX/IRIX] Fixed Neofetch crashing when calculating uptime.
+
+**Terminal**
+
+- [SSH] Fixed infinite loop if neofetch is run on non-interactive shells.
+
+**Terminal Font**
+
+- Added support for LXTerminal. **[@mstraube](https://github.com/mstraube)**
+- Added support for GNUStep Terminal. **[@mstraube](https://github.com/mstraube)**
+- Fixed Xfce4-terminal font output when system-wide font is used. **[@mstraube](https://github.com/mstraube)**
+- Fixed MATE-Terminal issue. **[@mstraube](https://github.com/mstraube)**
+- Fixed URxvt font detection failing if `.` is used. **[@winneon](https://github.com/winneon)**
+
+**Theme**
+
+- [Qt/KDE] Fixed inaccurate theme naming. **[@mstraube](https://github.com/mstraube)**
+- [Qt/KDE] GTK theme is now shows as well.
+
+**Window Manager**
+
+- [macOS] Added support for `chunkwm`. **[@dominiklohmann](https://github.com/dominiklohmann)**
+- Fix incorrect output when using WindowMaker. **[@mstraube](https://github.com/mstraube)**
+
+**Song**
+
+- Added support for Pogo. **[@mstraube](https://github.com/mstraube)**
+- Fixed bug with players not being found.
+
+**Battery**
+
+- Added battery support for Thinkpads and other devices that use the `CMB` naming for batteries. **[@deadda7a](https://github.com/deadda7a)**
 
 
-**Memory**
+## Images
 
-- [FreeBSD]: Fix inaccurate free memory calculation.
+- Fixed division by 0 error in XTerm.
+
+## Screenshot
+
+- Use `maim` over `scrot`. **[@ybden](https://github.com/ybden)**
+- Fixed `scrot_cmd` arguments not being used. **[@winneon](https://github.com/winneon)**
