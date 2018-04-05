@@ -1,122 +1,150 @@
 ## Contributors
 
-- **[@konimex](https://github.com/konimex)**
-- **[@mstraube](https://github.com/mstraube)**
-- **[@dominiklohmann](https://github.com/dominiklohmann)**
-- **[@ybden](https://github.com/ybden)**
-- **[@lexruee](https://github.com/lexruee)**
-- **[@AMDmi3](https://github.com/AMDmi3)**
-- **[@deadda7a](https://github.com/deadda7a)**
-- **[@winneon](https://github.com/winneon)**
-- **[@DamnWidget](https://github.com/DamnWidget)**
+- [**@yslgirl**](https://github.com/yslgirl)
+- [**@iandrewt**](https://github.com/iandrewt)
+- [**@chrisweeksnz**](https://github.com/chrisweeksnz)
+- [**@dawidd6**](https://github.com/dawidd6)
+- [**@MitchWeaver**](https://github.com/MitchWeaver)
+- [**@StarryTony**](https://github.com/StarryTony)
+- [**@rage311**](https://github.com/rage311)
+- [**@matoro**](https://github.com/matoro)
+- [**@szfcbr**](https://github.com/szfcbr)
+- [**@ArmstrongJ**](https://github.com/ArmstrongJ)
+- [**@robertwolter**](https://github.com/robertwolter)
+- [**@JadeMatrix**](https://github.com/JadeMatrix)
+- [**@MindTooth**](https://github.com/MindTooth)
+- [**@aidanharris**](https://github.com/aidanharris)
+- [**@khoacao96**](https://github.com/khoacao96)
+
+
+## OS
+
+- Added support for ArchMerge.
+- Added support for MagpieOS.
+- Added support for PostMarketOS.
+- Added support for Hyperbola GNU/Linux-libre [**@mstraube**](https://github.com/mstraube)
+- Added support for macOS High Sierra. [**@yslgirl**](https://github.com/yslgirl)
+- Added support for Container Linux by CoreOS. [**@chrisweeksnz**](https://github.com/chrisweeksnz)
+- Added support for 2017 iOS devices. [**@iandrewt**](https://github.com/iandrewt)
+- Added support for LEDE. [**@dawidd6**](https://github.com/dawidd6)
+- Added support for Pop!\_OS. [**@jliles**](https://github.com/jliles)
+- Added support for Lunar Linux.
+- Added support for 32-bit IRIX. [**@szfcbr**](https://github.com/szfcbr)
+- Added support for FreeMINT. [**@ArmstrongJ**](https://github.com/ArmstrongJ)
+- Added support for Anarchy Linux. [**@robertwolter**](https://github.com/robertwolter)
+- Added support for Calculate Linux. [**@robertwolter**](https://github.com/robertwolter)
+- Added support for NuTyX. [**@robertwolter**](https://github.com/robertwolter)
+- Added suport for openSUSE Tumbleweed. [**@robertwolter**](http://github.com/robertwolter)
+- Fixed detection bug with Gentoo.
+- Fixed detection bug with OpenWRT. [**@dawidd6**](https://github.com/dawidd6)
+- Fixed detection bug with LEDE. [**@dawidd6**](https://github.com/dawidd6)
+- Fixed detection bug with TrueOS. [**@dawidd6**](https://github.com/dawidd6)
+- Fixed detection bug with Windows Subsystem for Linux and Crouton when an OS without lsb_release is installed.
+- Fixed ChromeOS detection.
 
 
 ## General
 
-- Config file now has a `.conf` suffix.
-- Neofetch now assumes target directories (config file and ASCII directory) at install time, this fixes problems with systems such as NixOS.
-- `stdout` mode is now reimplemented.
-    - This mode prints the information in plain text.
-    - You can use it with `--stdout`.
-    - Example: https://gist.github.com/dylanaraps/151c205322cf3acae62661b76464a3f7
-- Fixed prompt location if color blocks are disabled.
-- Make makefile more portable. **[@AMDmi3](https://github.com/AMDmi3)**
+- Added more info to verbose mode for debugging.
+- Fixed bug in prompt location calculation.
+- Fixed prompt bug in OpenBSD.
+- Fixed broken AppleScript blocks. [**@JadeMatrix**](https://github.com/JadeMatrix)
+- Fixed  function not working in bash 3. [**@JadeMatrix**](https://github.com/JadeMatrix)
+- Swapped sequences from `\033` to `\e`.
+- Fixed Pacman name conflict with the game. [**@MitchWeaver**](https://github.com/MitchWeaver)
+- Removed the last `echo` in the script.
+- Fixed typo. [**@khoacao96**](https://github.com/khoacao96)
 
 
-## Operating System
+## Ascii
 
-- Added support for AryaLinux. **[@mstraube](https://github.com/mstraube)**
-- Added support for Amazon Linux AMI.
-- Added support for Artix Linux. **[@DamnWidget](https://github.com/DamnWidget)**
-- Added support for Endless OS.
-- Added support for Sabotage Linux.
-- Added support for Siduction. **[@lexruee](https://github.com/lexruee)**
-- Added support for Source Mage.
-- Added support for Parsix GNU/Linux. **[@mstraube](https://github.com/mstraube)**
-- Added support for Nurunner. **[@mstraube](https://github.com/mstraube)**
-- Fixed Raspbian being detected as ChromeOS.
+- Added color updates for Kubuntu logo. **Maulik Mistry**
+- Added new DragonflyBSD log. [**@MitchWeaver**](https://github.com/MitchWeaver)
 
 
 ## Images
 
-- [w3m] Fixed w3m-img not found on NixOS.
-- Added support for using all image types as input.
-    - Neofetch now supports `svg`, `tiff` etc.
-
-
-## ASCII
-
-- Added small Debian.
-- Added small FreeBSD.
-- Added small macOS.
-- Added small NixOS.
-
+- [MacOS/iTerm2] Fixed thumbnail not appearing. [**@StarryTony**](https://github.com/StarryTony)
+- Fixed bug with getting wallpaper from feh.
+- Added `pixterm` backend.
+- Don't force resolution in `catimg`.
 
 ## Info
 
-**GPU Driver**
+**Desktop Environment**
 
-- [Linux] Added a new info function (*off by default*) to display the GPU Driver currently in use.
-- Add `info "GPU Driver" gpu_driver` to your config to use it.
-
-**CPU**
-
-- [Linux] Fixed inaccurate output on ARM SoC devices.
-- [Linux] Fixed CPU speed not appearing on PowerPC systems.
-- [NetBSD] Added support for CPU temperature. (NOTE: This only supports newer Intel processors)
-- Fixed inaccurate speed output in systems with CPU speed less than 1 GHz.
-- Deprecated `cpu_shorthand` in favor of `cpu_brand`.
-
-**GPU**
-
-- [Linux] Filter out duplicate entries.
-
-**Model**
-
-- Added support for QEMU/KVM.
-- Renamed subtitle to `Host:`.
-
-**Uptime**
-
-- [AIX/IRIX] Fixed Neofetch crashing when calculating uptime.
-
-**Terminal**
-
-- [SSH] Fixed infinite loop if neofetch is run on non-interactive shells.
-
-**Terminal Font**
-
-- Added support for LXTerminal. **[@mstraube](https://github.com/mstraube)**
-- Added support for GNUStep Terminal. **[@mstraube](https://github.com/mstraube)**
-- Fixed Xfce4-terminal font output when system-wide font is used. **[@mstraube](https://github.com/mstraube)**
-- Fixed MATE-Terminal issue. **[@mstraube](https://github.com/mstraube)**
-- Fixed URxvt font detection failing if `.` is used. **[@winneon](https://github.com/winneon)**
-
-**Theme**
-
-- [Qt/KDE] Fixed inaccurate theme naming. **[@mstraube](https://github.com/mstraube)**
-- [Qt/KDE] GTK theme is now shows as well.
+- Added GNOME version.
+- Added support for TDE.
 
 **Window Manager**
 
-- [macOS] Added support for `chunkwm`. **[@dominiklohmann](https://github.com/dominiklohmann)**
-- Fix incorrect output when using WindowMaker. **[@mstraube](https://github.com/mstraube)**
+- Added support for most (*if not all*) current Wayland compositors/window manager's.
+- Added support for some non-EWMH window managers.
+- [macOS] Fixed `chunkwm` being detected as `Kwm`. [**@iandrewt**](https://github.com/iandrewt)
+
+**Window Manager Theme**
+
+- Fixed `sawfish` detection.
+- [macOS] Now detects Light/Dark theme. [**@JadeMatrix**](https://github.com/JadeMatrix)
+
+**Install Date**
+
+- [macOS] Fixed Install Date. [**@iandrewt**](https://github.com/iandrewt)
+
+**Theme**
+
+- Fixed KDE font issue. [**@mstraube**](https://github.com/mstraube)
+
+**CPU**
+
+- [linux] Detect the correct temperature file to use.
+- [windows] Removed `$temp` usage as it's an envar.
+- [OpenBSD] Fixed CPU temperature that fails to appear in some systems. [**@rage311**](https://github.com/rage311)
+
+**GPU**
+
+- [linux] Added driver version to NVIDIA output.
+- [linux] Added driver version to Intel output.
+- [macOS] Added NVIDIA support. [**@iandrewt**](https://github.com/iandrewt)
+
+**Memory**
+
+- [OpenBSD] Fixed memory usage values. [**@rage311**](https://github.com/rage311)
+
+**Package Manager**
+
+- Added detection for Sabotage Linux's `butch` [**@MitchWeaver**](https://github.com/MitchWeaver)
+- Changed `pacman` detection to fix issues in other distros. [**@MitchWeaver**](https://github.com/MitchWeaver)
+
+**Resolution**
+
+- [macOS] Fixed errors on non-retina screens. [**@iandrewt**](https://github.com/iandrewt)
 
 **Song**
 
-- Added support for Pogo. **[@mstraube](https://github.com/mstraube)**
-- Fixed bug with players not being found.
+- Added option to manually specify the player to use.
+- Added support for Elisa. [**@mstraube**](https://github.com/mstraube)
+- macOS detection is now more reliable. [**@JadeMatrix**](https://github.com/JadeMatrix)
+
+**Model**
+
+- Remove more unneeded outputs. [**@konimex**](https://github.com/konimex)
+
+**Disk**
+
+- Update Haiku's detection. [**@dawidd6**](https://github.com/dawidd6)
 
 **Battery**
 
-- Added battery support for Thinkpads and other devices that use the `CMB` naming for batteries. **[@deadda7a](https://github.com/deadda7a)**
+- Fixed Windows detection. [**@matoro**](https://github.com/matoro)
 
+**Shell**
 
-## Images
+- Added support for `tcsh`. [**@szfcbr**](https://github.com/szfcbr)
 
-- Fixed division by 0 error in XTerm.
+**Terminal Font**
 
-## Screenshot
-
-- Use `maim` over `scrot`. **[@ybden](https://github.com/ybden)**
-- Fixed `scrot_cmd` arguments not being used. **[@winneon](https://github.com/winneon)**
+- Added more paths for Alacritty.
+- Added font support for Kitty. [**@MindTooth**](https://github.com/MindTooth)
+- Fixed Kitty `font_size` regex. [**@aidanharris**](https://github.com/aidanharris)
+- Added support for `XTerm.vt11.facename`. [**@aidanharris**](https://github.com/aidanharris)
