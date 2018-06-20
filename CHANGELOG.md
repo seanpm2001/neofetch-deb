@@ -7,6 +7,88 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+<img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px">
+
+A lot of the script has been rewritten and all lint errors have been resolved. There's probably a few bugs so the version number has been bumped to `5.0`. Thanks to everyone who contributed to this release.
+
+**Contributors**
+
+- [**@arisinfenix**](https://github.com/arisinfenix)
+- [**@iandrewt**](https://github.com/iandrewt)
+- [**@konimex**](https://github.com/konimex)
+- [**@MindTooth**](https://github.com/MindTooth)
+
+**Operating System**
+
+- Added support for Condres OS. [**@arisinfenix**](https://github.com/arisinfenix)
+- Added support for RedCore Linux. [**@arisinfenix**](https://github.com/arisinfenix)
+- Added support for Regata OS. [**@arisinfenix**](https://github.com/arisinfenix)
+- Added support for ClearOS. [**@arisinfenix**](https://github.com/arisinfenix)
+- Added support for PureOS.
+- Added support for Kibojoe Linux.
+- Added support for SharkLinux.
+- Added support for Linux Lite.
+- Added support for macOS 10.14 Mojave. [**@iandrewt**](https://github.com/iandrewt)
+
+**General**
+
+- **output**: Added `--json` to output the info in `json`.
+- **cursor**: Fixed prompt location issues after Neofetch is run.
+- **macOS**: Fixed neofetch launching XQuartz.
+- **misc**: Removed `uppercase()`.
+- **misc**: Removed all instances of `export`.
+- **misc**: Removed all deprecated options and functions.
+- **info**: Removed `get_install_date()`.
+
+**Ascii**
+
+- Fixed a bug causing Windows 7 ASCII art to not display.
+- Simplified ASCII art handling.
+- Updated Funtoo ASCII art.
+
+**Image**
+
+- Improved performance of image handling.
+- Removed `catimg` support (*It didn’t allow us to specify height so we
+  couldn’t accurately place the cursor*).
+- Fixed `tycat`, `sixel` and `kitty icat` image sizes.
+- Simplified `w3m-img` code.
+
+**Screenshot**
+
+See: https://github.com/dylanaraps/neofetch/issues/1001
+
+- Removed screenshot functionality.
+- Removed screenshot upload functionality.
+
+**Info**
+
+- **cpu**: Remove extra call to `uname`.
+- **cpu**: Simplify core calculation.
+- **disk**: Clean up.
+- **font**: Fix iTerm2 checking for 2 extra profiles that don't exist. [**@iandrewt**](https://github.com/iandrewt")
+- **gpu**: Fixed ATI/AMD branding issue.
+- **gpu**: Removed `glxinfo` usage (*too slow*).
+- **packages**: Added support for `flatpak`. [**@konimex**](https://github.com/konimex)
+- **packages**: Added support for `snap`. [**@konimex**](https://github.com/konimex)
+- **packages**: Added used package managers to output (`Packages: 900
+  (pacman, snap)`).
+- **packages**: Fixed issues with `pacman` 5.1.
+- **packages**: Fixed issues with `dpkg`.
+- **packages**: Removed `find` usage.
+- **packages**: Removed `ls` usage.
+- **packages**: Removed `wc -l` usage.
+- **song**: Added support for `gmusicbrowser`. [**@arisinfenix**](https://github.com/arisinfenix)
+- **song**: Added support for `SMPlayer`. [**@arisinfenix**](https://github.com/arisinfenix)
+- **song**: Added support for `Dragon Player`. [**@arisinfenix**](https://github.com/arisinfenix)
+- **song**: Fixed song detection on macOS.
+- **song**: Fixed song output on systems using `C` locale.
+- **song**: Added `mpc_args` to send additional arguments to `mpc`.
+- **term\_font**: Clean up of config file handling.
+- **resolution**: Added support for `xwininfo`.
+
+## [4.0.2] - 2018-05-19
+
 - [config] Fixed `/dev/stdin` error.
 - [config] Added `--print_config` to display the default config file.
 - [macOS] Fixed xquartz issue.
@@ -2674,7 +2756,8 @@ Changelog:
 Let me know if you're having issues.
 
 
-[Unreleased]: https://github.com/dylanaraps/neofetch/compare/4.0.1...HEAD
+[Unreleased]: https://github.com/dylanaraps/neofetch/compare/4.0.2...HEAD
+[4.0.2]: https://github.com/dylanaraps/neofetch/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/dylanaraps/neofetch/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/dylanaraps/neofetch/compare/3.4.0...4.0.0
 [3.4.0]: https://github.com/dylanaraps/neofetch/compare/3.3.0...3.4.0

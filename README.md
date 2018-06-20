@@ -1,4 +1,5 @@
-<h1 align="center"><img src="https://i.imgur.com/JFxwJtU.png" alt="logo" height="50px"></h1>
+<h3 align="center"><img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px"></h3>
+<p align="center">A command-line system information tool written in bash 3.2+</p>
 
 <p align="center">
 <a href="https://discord.gg/BtnTPFF"><img src="https://img.shields.io/discord/440354555197128704.svg"></a>
@@ -6,11 +7,10 @@
 <a href="./LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 <a href="https://github.com/dylanaraps/neofetch/releases"><img src="https://img.shields.io/github/release/dylanaraps/neofetch.svg"></a>
 <a href="https://www.patreon.com/dyla"><img src="https://img.shields.io/badge/donate-patreon-yellow.svg"></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V7QNJNKS3WYVS"><img src="https://img.shields.io/badge/donate-paypal-green.svg"></a>
 </p>
 
-<a href="https://repology.org/metapackage/neofetch">
-    <img src="https://repology.org/badge/vertical-allrepos/neofetch.svg" alt="Packaging status" align="right" width="150px" height="700px">
-</a>
+<img src="https://i.imgur.com/GFmC5Ad.png" alt="neofetch" align="right" height="240px">
 
 Neofetch is a command-line system information tool written in `bash 3.2+`. Neofetch displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 
@@ -18,14 +18,14 @@ The overall purpose of Neofetch is to be used in screen-shots of your system. Ne
 
 The information by default is displayed alongside your operating system's logo. You can further configure Neofetch to instead use an image, a custom ASCII file, your wallpaper or nothing at all.
 
+<img src="https://i.imgur.com/lUrkQBN.png" alt="neofetch" align="right" height="240px">
+
 You can further configure Neofetch to display exactly what you want it to. Through the use of command-line flags and the configuration file you can change existing information outputs or add your own custom ones.
 
-Neofetch supports almost 150 different operating systems. From Linux to Windows, all the way to more obscure operating systems like Minix, AIX and Haiku. If your favourite operating system is unsupported: Open up an issue and support will be added.<br>
+Neofetch supports almost 150 different operating systems. From Linux to Windows, all the way to more obscure operating systems like Minix, AIX and Haiku. If your favourite operating system is unsupported: Open up an issue and support will be added.
 
-<img src="https://i.imgur.com/lUrkQBN.png" alt="neofetch" align="right" width="349px">
-<img src="https://i.imgur.com/GFmC5Ad.png" alt="neofetch" width="349px">
 
-### For more information: \[[Dependencies](https://github.com/dylanaraps/neofetch/wiki/Dependencies)\] \[[Installation](https://github.com/dylanaraps/neofetch/wiki/Installation)\] \[[Wiki](https://github.com/dylanaraps/neofetch/wiki)\]
+### More: \[[Dependencies](https://github.com/dylanaraps/neofetch/wiki/Dependencies)\] \[[Installation](https://github.com/dylanaraps/neofetch/wiki/Installation)\] \[[Wiki](https://github.com/dylanaraps/neofetch/wiki)\]
 
 ## Articles
 
@@ -42,6 +42,8 @@ Neofetch supports almost 150 different operating systems. From Linux to Windows,
 - https://www.techrepublic.com/article/how-to-get-all-the-information-you-need-about-your-linux-machine-with-a-single-command/
 - https://www.tecmint.com/neofetch-shows-linux-system-information-with-logo/
 - https://www.youtube.com/watch?v=bgepGW858fc
+- https://www.linuxuprising.com/2018/05/display-system-information-on-linux.html
+- https://esgeeks.com/neofetch-informacion-sistema-linux/
 
 
 ## Thanks
@@ -54,6 +56,7 @@ Neofetch supports almost 150 different operating systems. From Linux to Windows,
 
 ## Donate
 
-Donations will allow me to spend more time working on `neofetch`.
+Donations allow me to spend more time working on `neofetch` and my other Open Source projects. If you like `neofetch` and want to give back in some way you can donate at the links below.
 
-If you like `neofetch` and want to give back in some way you can donate here: **https://patreon.com/dyla**
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V7QNJNKS3WYVS"><img src="https://img.shields.io/badge/donate-paypal-green.svg"></a> <a href="https://www.patreon.com/dyla"><img src="https://img.shields.io/badge/donate-patreon-yellow.svg"></a>
+
