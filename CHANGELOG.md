@@ -9,7 +9,110 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px">
 
-A lot of the script has been rewritten and all lint errors have been resolved. There's probably a few bugs so the version number has been bumped to `5.0`. Thanks to everyone who contributed to this release.
+**Contributors**
+
+[**@konimex**](https://github.com/konimex), [**@iandrewt**](https://github.com/iandrewt), [**@arisinfenix**](https://github.com/arisinfenix), [**@xPMo**](https://github.com/xPMo), [**@nero**](https://github.com/nero), [**@alyssais**](https://github.com/alyssais), [**@plgruener**](https://github.com/plgruener), [**@StarryTony**](https://github.com/StarryTony), [**@julianaito**](https://github.com/julianaito), [**@HolyStephano**](https://github.com/HolyStephano), [**@nikitenich**](https://github.com/nikitenich), [**@Appadeia**](https://github.com/Appadeia), [**@marlonn**](https://github.com/marlonn), [**@Snuggle**](https://github.com/dylanaraps/neofetch/commits?author=Snuggle), [**@Phuurl**](https://github.com/Phuurl), [**@erikdubois**](https://github.com/erikdubois)
+
+**OS**
+
+- Added support for Bedrock Linux. [**@paradigm**](https://github.com/paradigm)
+- Added support for Namib GNU/Linux. [**@arisinfenix**](https://github.com/arisinfenix)
+- Added support for Reborn OS. [**@iandrewt**](https://github.com/iandrewt)
+- Added support for OpenMandriva Lx. [**@konimex**](https://github.com/konimex)
+- Added support for Star. [**@arisinfenix**](https://github.com/arisinfenix)
+- Added support for BlueLight OS.
+- Added support for Huayra Linux.
+- Added support for Pentoo.
+
+**Highlights**
+
+- [ASCII] Added support for command output. You can now use whatever terminal commands you like as the ASCII art.
+
+```sh
+# Use fortune and cowsay as ascii art.
+neofetch --ascii "$(fortune|cowsay -W 30)"
+
+# use figlet as ascii art.
+neofetch --ascii "$(figlet -w 30 hello world)"
+```
+
+<img src="https://i.imgur.com/ozoXAvz.jpg" alt="scrot" height="400px">
+
+- Added a new "simple" mode. You can now use neofetch for scripting by getting it to output individual info functions in plain text.
+
+```sh
+# Example:
+neofetch uptime --uptime_shorthand tiny
+> uptime: 32m
+
+# Example:
+neofetch uptime disk wm memory
+> uptime: 33 mins
+> disk (/): 212G / 235G (96%)
+> wm: Openbox
+> memory: 1215MiB / 7881MiB
+
+# This can be used in bars and scripts like so:
+memory="$(neofetch memory)"; memory="${memory##*: }"
+
+# For multiple outputs at once (each line of info in an array):
+# Much faster than running neofetch multiple times.
+IFS=$'\n' read -d "" -ra info < <(neofetch memory uptime wm)
+info=("${info[@]##*: }")
+```
+
+**Info**
+
+- **Song**: Added snippet to display music player.
+    - `[[ $player ]] && prin "Music Player" "$player"`
+    - NOTE: Must have `info "Song" song` enabled.
+- **Song**: Added support for Netease Cloud.
+- **Song**: Fixed issues in various players. [**@arisinfenix**](https://github.com/arisinfenix) [**@xPMo**](https://github.com/xPMo)
+- **Song**: Fixed issues with non-English tags.
+- **Song**: Fixed issues with broken newlines.
+- **Song**: Fixed issues with Deadbeef.
+- **Song**: Fixed issues with `qmmp`.
+- **Song**: Removed `gpmdp-remote` support (unmaintained/no longer works).
+- **Shell**: Fixed output for mksh [**@nero**](https://github.com/nero)
+- **Packages**: Added support for `scoop`. [**@Phuurl**](https://github.com/Phuurl)
+- **Packages**: Added support for `puyo`. [**@Appadeia**](https://github.com/Appadeia)
+- **Packages**: Added support for `spm`. [**@Appadeia**](https://github.com/author=Appadeia)
+- **Packages** [macOS]: Added detection of Nix [**@alyssais**](https://github.com/alyssais)
+- **Packages**: Fixed packages from pkginfo (pkgutils) not appearing in CRUX/Janus Linux.
+- **Terminal Font**: Added support for Yakuake [**@plgruener**](https://github.com/plgruener)
+- **Terminal Font** [Kitty]: Use `kitty --debug-config` to get font information.
+- **Memory** [Solaris]: Updated memory detection to use pages. [**@konimex**](https://github.com/konimex)
+- **Model** [OpenBSD]: Added vmm (OpenBSD hypervisor) support [**@julianaito**](https://github.com/julianaito)
+- **Model** [macOS]: Added VirtualSMC as a new FakeSMC alternative for Hackintosh. [**@nikitenich**](https://github.com/nikitenich)
+- **WM**: Added detection for FVWM. [**@julianaito**](https://github.com/julianaito)
+- **WM** [OpenBSD]: Added a new `ps_flags` to correctly detect non-EWMH WMs. [**@julianaito**](https://github.com/julianaito)
+- **Disk** [OpenBSD]: Added a separate disk array creation using `awk` since one cannot directly use `/dev/...` unless being root or in the `operator` group. [**@julianaito**](https://github.com/julianaito)
+- **Battery** [OpenBSD]: Improve charge `%` and add status. **Charlène**
+- **GPU** [AMD]: Remove unnecessary check.
+
+**ASCII**
+
+- Added support for command output.
+    - `neofetch --ascii "$(fortune|cowsay -W 30)"`
+    - `neofetch --ascii "$(figlet -w 30 hello world)"`
+- Added small ArcoLinux logo. [**@erikdubois**](https://github.com/erikdubois)
+- Added new Lubuntu logo. [**@marlonn**](https://github.com/marlonn)
+- Fixed a bug where ASCII logo changes the terminal foreground color. [**@plgruener**](https://github.com/plgruener)
+- Fixed a bug when files named `auto` or `ascii` exist.
+- Do not parse file as ASCII if the source is an image file.
+
+**Image**
+
+- **macOS**: Unset IFS to get window size. [**@StarryTony**](https://github.com/StarryTony)
+- **Kitty**: Use `kitty +kitten icat` instead of the deprecated `kitty icat`. [**@HolyStephano**](https://github.com/HolyStephano)
+- **Kitty**: Update docs. [**@Snuggle**](https://github.com/dylanaraps/neofetch/commits?author=Snuggle)
+- Cached thumbnails are now stored with PATH to prevent collision issues.
+
+## [5.0.0] - 2018-06-18
+
+<img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px">
+
+A lot of the script has been rewritten and all lint errors have been resolved. There's probably a few bugs so the version number has been bumped to `5.0`. Expect a minor release in the coming days to fix any bugs that come up. Thanks to everyone who contributed to this release.
 
 **Contributors**
 
@@ -89,10 +192,11 @@ See: https://github.com/dylanaraps/neofetch/issues/1001
 
 ## [4.0.2] - 2018-05-19
 
+### This fixes default config issues on Android, AIX, HP-UX and possibly others.
+
 - [config] Fixed `/dev/stdin` error.
 - [config] Added `--print_config` to display the default config file.
 - [macOS] Fixed xquartz issue.
-
 
 ## [4.0.1] - 2018-05-18
 
@@ -2756,7 +2860,8 @@ Changelog:
 Let me know if you're having issues.
 
 
-[Unreleased]: https://github.com/dylanaraps/neofetch/compare/4.0.2...HEAD
+[Unreleased]: https://github.com/dylanaraps/neofetch/compare/5.0.0...HEAD
+[5.0.0]: https://github.com/dylanaraps/neofetch/compare/4.0.2...5.0.0
 [4.0.2]: https://github.com/dylanaraps/neofetch/compare/4.0.1...4.0.2
 [4.0.1]: https://github.com/dylanaraps/neofetch/compare/4.0.0...4.0.1
 [4.0.0]: https://github.com/dylanaraps/neofetch/compare/3.4.0...4.0.0
