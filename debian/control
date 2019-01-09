@@ -11,6 +11,7 @@ Homepage: https://github.com/dylanaraps/neofetch
 Package: neofetch
 Architecture: all
 Depends: ${misc:Depends}
+Recommends: chafa
 Description: Shows Linux System Information with Distribution Logo
  Neoftech is a cross-platform and easy-to-use system information
  command line script that collects your Linux system information
