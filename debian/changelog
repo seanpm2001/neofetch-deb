@@ -1,3 +1,9 @@
+neofetch (7.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Fri, 14 Aug 2020 10:59:40 +0900
+
 neofetch (7.0.0-1) unstable; urgency=medium
 
   * New upstream release.
