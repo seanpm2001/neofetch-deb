@@ -1,3 +1,10 @@
+neofetch (7.1.0-2) unstable; urgency=medium
+
+  * Fix typo in Package description (Closes: #963627).
+    Thanks to Raymond Wu Won <rwcaret2@gmail.com>.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 17 Nov 2020 18:25:49 +0900
+
 neofetch (7.1.0-1) unstable; urgency=medium
 
   * New upstream release.
