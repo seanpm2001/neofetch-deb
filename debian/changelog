@@ -3,6 +3,7 @@ neofetch (7.1.0-4) UNRELEASED; urgency=medium
   * Update d/control.
     - Bump Standards-Version to 4.6.0.1.
     - Add debhelper-compat version in Build-Depends.
+    - Add Rules-Requires-Root: no
   * Remove d/compat.
 
  -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 09 Sep 2021 14:00:57 +0900
