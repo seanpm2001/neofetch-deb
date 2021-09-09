@@ -1,3 +1,15 @@
+neofetch (7.1.0-3) unstable; urgency=medium
+
+  * d/control: Add some image display tools to Recommends (Closes: #984431)
+    Thanks to Benjamin Barenblat <bbaren@debian.org>.
+  * d/control: Add pciutils to Recommends (Closes: #984432)
+    Thanks to Benjamin Barenblat <bbaren@debian.org>.
+  * Change shebang to '#!/bin/bash' (Closes: #984433)
+    - Add d/patches/0001-Change-shebang-to-bin-bash-Closes-984433.patch
+    - Thanks to Benjamin Barenblat <bbaren@debian.org>.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 09 Sep 2021 12:09:46 +0900
+
 neofetch (7.1.0-2) unstable; urgency=medium
 
   * Fix typo in Package description (Closes: #963627).
