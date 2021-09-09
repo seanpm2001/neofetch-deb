@@ -1,3 +1,10 @@
+neofetch (7.1.0-4) UNRELEASED; urgency=medium
+
+  * Update d/control.
+    - Bump Standards-Version to 4.6.0.1.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 09 Sep 2021 14:00:57 +0900
+
 neofetch (7.1.0-3) unstable; urgency=medium
 
   * d/control: Add some image display tools to Recommends (Closes: #984431)
