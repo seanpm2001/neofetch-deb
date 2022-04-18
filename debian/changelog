@@ -10,6 +10,8 @@ neofetch (7.1.0-4) UNRELEASED; urgency=medium
     - Update copyright year.
   * d/upstream/metadata
     - Add file.
+  * Update d/watch.
+    - Fix format.
 
  -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 18 Apr 2022 17:27:53 +0900
 
