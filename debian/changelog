@@ -1,4 +1,4 @@
-neofetch (7.1.0-4) UNRELEASED; urgency=medium
+neofetch (7.1.0-4) unstable; urgency=medium
 
   * Update d/control.
     - Bump Standards-Version to 4.6.0.1.
@@ -6,9 +6,9 @@ neofetch (7.1.0-4) UNRELEASED; urgency=medium
     - Add Rules-Requires-Root: no
     - Add 'Multi-Arch: foreign'.
   * Remove d/compat.
-  * d/copyright
+  * Update d/copyright
     - Update copyright year.
-  * d/upstream/metadata
+  * Add d/upstream/metadata
     - Add file.
   * Update d/watch.
     - Fix format.
