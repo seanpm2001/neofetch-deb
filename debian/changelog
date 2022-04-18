@@ -6,8 +6,12 @@ neofetch (7.1.0-4) UNRELEASED; urgency=medium
     - Add Rules-Requires-Root: no
     - Add 'Multi-Arch: foreign'.
   * Remove d/compat.
+  * d/copyright
+    - Update copyright year.
+  * d/upstream/metadata
+    - Add file.
 
- -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 18 Apr 2022 17:18:33 +0900
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 18 Apr 2022 17:27:53 +0900
 
 neofetch (7.1.0-3) unstable; urgency=medium
 
