@@ -4,9 +4,10 @@ neofetch (7.1.0-4) UNRELEASED; urgency=medium
     - Bump Standards-Version to 4.6.0.1.
     - Add debhelper-compat version in Build-Depends.
     - Add Rules-Requires-Root: no
+    - Add 'Multi-Arch: foreign'.
   * Remove d/compat.
 
- -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Thu, 09 Sep 2021 14:00:57 +0900
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 18 Apr 2022 17:18:33 +0900
 
 neofetch (7.1.0-3) unstable; urgency=medium
 

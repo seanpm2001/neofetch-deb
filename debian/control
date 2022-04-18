@@ -12,6 +12,7 @@ Homepage: https://github.com/dylanaraps/neofetch
 Package: neofetch
 Architecture: all
 Depends: ${misc:Depends}
+Multi-Arch: foreign
 Recommends: chafa, caca-utils, imagemagick, jp2a, libsixel-bin, w3m-img, pciutils
 Description: Shows Linux System Information with Distribution Logo
  Neofetch is a cross-platform and easy-to-use system information
