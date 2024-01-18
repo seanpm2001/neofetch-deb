@@ -1,5 +1,5 @@
 Source: neofetch
-Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+Maintainer: Toradex Packaging Team <debian-pkg-team@toradex.com>
 Section: utils
 Priority: optional
 Build-Depends: debhelper-compat (= 13)
