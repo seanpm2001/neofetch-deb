@@ -12,4 +12,4 @@ jobs:
           buildpackage-opts: --build=binary --no-sign
           host-arch: arm64
           apt-opts: --install-recommends
-          docker-image: debian:testing-slim
+
