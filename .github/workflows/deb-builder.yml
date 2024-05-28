@@ -22,6 +22,16 @@ jobs:
           buildpackage-opts: --build=binary --no-sign
           extra-docker-args: --platform ${{ matrix.arch }}
 
+      - name: Generating artifact directory name
+        run: echo "artifacts=neofetch-${{ matrix.arch }}" >> $GITHUB_ENV
+
+      - name: Upload Workflow Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.artifacts }}
+          path: debian/artifacts/*
+          retention-days: 90
+
       - name: Run piuparts test
         uses: evgeni/action-piuparts@b6520bd02312076d3148b57ff3109dea1145bf0d
         with:
