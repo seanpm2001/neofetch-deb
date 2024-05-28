@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - uses: leonheldattoradex/build-deb-action@v1.7.1
         env:
           DEB_BUILD_OPTIONS: noautodbgsym
@@ -13,3 +14,9 @@ jobs:
           host-arch: arm64
           apt-opts: --install-recommends
 
+      - name: Run piuparts test
+        uses: evgeni/action-piuparts@b6520bd02312076d3148b57ff3109dea1145bf0d
+        with:
+          package: debian/artifacts/*.changes
+          base-image: debian:bookworm
+          distribution: bookworm
