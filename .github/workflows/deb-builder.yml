@@ -14,13 +14,13 @@ jobs:
       - name: Set up binfmt with qemu
         uses: docker/setup-qemu-action@v3
 
-      - uses: leonheldattoradex/build-deb-action@v1.7.1
+      - name: Build Debian Package
+        uses: jtdor/build-deb-action@v1
         env:
           DEB_BUILD_OPTIONS: noautodbgsym
         with:
           buildpackage-opts: --build=binary --no-sign
           extra-docker-args: --platform ${{ matrix.arch }}
-          apt-opts: --install-recommends
 
       - name: Run piuparts test
         uses: evgeni/action-piuparts@b6520bd02312076d3148b57ff3109dea1145bf0d
