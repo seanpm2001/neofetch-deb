@@ -8,7 +8,8 @@ jobs:
       matrix:
         arch: ['amd64', 'arm64', 'armhf']
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Set up binfmt with qemu
         uses: docker/setup-qemu-action@v3
