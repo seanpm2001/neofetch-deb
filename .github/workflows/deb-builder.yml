@@ -2,39 +2,20 @@ on: push
 
 jobs:
   build-debs:
-    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      attestations: write
     strategy:
       fail-fast: false
       matrix:
         arch: ['amd64', 'arm64', 'armhf']
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up binfmt with qemu
-        uses: docker/setup-qemu-action@v3
-
-      - name: Build Debian Package
-        uses: jtdor/build-deb-action@v1
-        env:
-          DEB_BUILD_OPTIONS: noautodbgsym
-        with:
-          buildpackage-opts: --build=binary --no-sign
-          extra-docker-args: --platform ${{ matrix.arch }}
-
-      - name: Generating artifact directory name
-        run: echo "artifacts=neofetch-${{ matrix.arch }}" >> $GITHUB_ENV
-
-      - name: Upload Workflow Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.artifacts }}
-          path: debian/artifacts/*
-          retention-days: 90
-
-      - name: Run piuparts test
-        uses: evgeni/action-piuparts@b6520bd02312076d3148b57ff3109dea1145bf0d
-        with:
-          package: debian/artifacts/*.changes
-          base-image: debian:bookworm
-          distribution: bookworm
+    uses: torizon/torizon-deb-ci/.github/workflows/toradex-deb-ci.yml@v0
+    with:
+      arch: ${{ matrix.arch }}
+      distribution: bookworm
+      docker-image: debian:bookworm
+      package-name: neofetch
+      run-attestation: true
+      run-piuparts: true
+      upload-artifacts: true
